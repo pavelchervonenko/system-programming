@@ -1,0 +1,14 @@
+LIVE 241.198.4.1 sent=0 recv=0 conn=0
+241.198.4.1 sent=0 recv=0 conn=0
+15.65.10.1 sent=1259 recv=0 conn=0
+  peer 134.37.11.133 out=1259 in=0
+186.224.28.1 sent=0 recv=803 conn=0
+2.246.29.1 sent=0 recv=0 conn=0
+62.206.86.1 sent=0 recv=0 conn=1
+250.76.146.1 sent=0 recv=1001 conn=0
+15.6.153.1 sent=696 recv=0 conn=0
+  peer 197.91.146.207 out=696 in=0
+176.77.188.1 sent=0 recv=1027 conn=0
+207.91.208.1 sent=0 recv=1364 conn=0
+147.4.5.2 sent=900 recv=0 conn=0
+  peer 44.188.222.161 out=900 in=0
