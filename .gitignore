@@ -1,3 +1,8 @@
+# VSCode project settings
+.vscode/*
+!.vscode/tasks.json
+!.vscode/launch.json
+
 # --- Компиляция C/C++ ---
 *.o
 *.obj
