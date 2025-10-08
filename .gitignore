@@ -1,0 +1,51 @@
+# --- Компиляция C/C++ ---
+*.o
+*.obj
+*.lo
+*.la
+*.a
+*.so
+*.dll
+*.dylib
+*.exe
+*.out
+*.app
+*.i
+*.ii
+*.s
+
+# --- Автоматически сгенерированные файлы ---
+*.d
+*.gcda
+*.gcno
+*.gcov
+
+# --- Логи и временные файлы ---
+*.log
+*.tmp
+*.swp
+*.bak
+*.old
+*.orig
+
+# --- Каталоги сборки ---
+build/
+bin/
+obj/
+dist/
+out/
+
+# --- Системные и IDE файлы ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.code-workspace
+
+# --- Бэкапы и кэш ---
+*~
+.cache/
+*.stackdump
+
+# --- Прочее ---
+*.run

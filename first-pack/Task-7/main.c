@@ -55,8 +55,6 @@ void print_long_format(char *dir_name, char *file_name)
 
     printf(" %s", file_name);
 
-    // printf(" %lu", (unsigned long)file_stat.st_ino);
-
     printf("\n");
 }
 
@@ -89,20 +87,6 @@ void list_directory(char *name, ls_options options)
     }
     closedir(dir);
 }
-
-// void *handle(void *arg)
-// {
-//     void **args = (void **)arg;
-//     char *path = (char *)args[0];
-//     ls_options *options = (ls_options *)args[1];
-
-//     printf("thread %lu started\n", (unsigned long)pthread_self());
-//     list_directory(path, *options);
-//     printf("thread %lu stopped\n", (unsigned long)pthread_self());
-
-//     free(args);
-//     return (void *)pthread_self();
-// }
 
 void parse_options(int argc, char *argv[], ls_options *options, int *first_dir_idx)
 {
@@ -158,59 +142,10 @@ int main(int argc, char *argv[])
         return -1;
     }
 
-    // int dir_count = argc - first_dir_idx;
-
     for (int i = first_dir_idx; i < argc; ++i)
     {
         list_directory(argv[i], options);
     }
 
-    // int dir_count = argc - first_dir_idx;
-    // pthread_t *thr_ids = (pthread_t *)malloc(dir_count * sizeof(pthread_t));
-    // if (!thr_ids)
-    // {
-    //     printf("ERROR: alloc mem\n");
-    //     return -1;
-    // }
-
-    // size_t thr_cnt = 0;
-
-    // for (int i = first_dir_idx; i < argc; ++i)
-    // {
-    //     void **arg = malloc(2 * sizeof(void *));
-    //     if (!arg)
-    //     {
-    //         printf("ERROR: alloc mem\n");
-    //         continue;
-    //     }
-
-    //     arg[0] = argv[i];
-    //     arg[1] = &options;
-
-    //     pthread_t thr_id = 0;
-    //     if (pthread_create(&thr_id, NULL, &handle, arg) != 0)
-    //     {
-    //         printf("ERROR: pthread_create\n");
-    //         free(arg);
-    //         continue;
-    //     }
-
-    //     thr_ids[thr_cnt++] = thr_id;
-    // }
-
-    // for (size_t i = 0; i < thr_cnt; ++i)
-    // {
-    //     pthread_t joined_thr_id = 0;
-    //     if (pthread_join(thr_ids[i], (void **)&joined_thr_id) != 0)
-    //     {
-    //         printf("ERROR: pthread_join\n");
-    //     }
-    //     else
-    //     {
-    //         printf("thread %lu joined\n", (unsigned long)joined_thr_id);
-    //     }
-    // }
-
-    // free(thr_ids);
     return 0;
 }

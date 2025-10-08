@@ -1,4 +1,0 @@
-/etc/hosts
-/etc/passwd
-/bin/sh
-/bin/ls
